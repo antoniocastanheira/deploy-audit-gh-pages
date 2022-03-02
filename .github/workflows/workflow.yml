@@ -1,27 +1,21 @@
-name: Audit Deploy
-
+name: Build and Deploy
 on:
   push:
     branches:
-      - "main"
-
+      - main
 jobs:
-  builds:
-    runs-on: ubuntu-lastest
-
-  strategy:
-    matrix:
-      node-version: [12.x]
-
-  build-audit-and-deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
     steps:
-      - uses: actions/checkout@v2
-      - name: Dependencies
-        run: npm run install:ci
-      - name: Deploy
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+
+      - name: Install and Build 🔧
+        run: |
+          npm run install:ci
+
+      - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.2.5
-        with: 
+        with:
           branch: gh-pages
           folder: audit
