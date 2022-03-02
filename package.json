@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "predeploy": "npm audit --json | npm-audit-html --output audit/index.html",
-    "deploy": "gh-pages -d audit",
+    "build": "npm audit --json | npm-audit-html --output audit/index.html",
     "install:ci": "npm install --frozen-lockfile"
   },
   "author": "",
