@@ -3,7 +3,7 @@ name: Audit Deploy
 on:
   push:
     branches:
-      - "master"
+      - "main"
 
 jobs:
   builds:
