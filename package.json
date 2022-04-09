@@ -20,7 +20,7 @@
     "js-cookie": "2.0.3",
     "lint-staged": "^10.2.2",
     "mini-css-extract-plugin": "^1.6.2",
-    "moment": "^2.18.1",
+    "moment": "^2.29.2",
     "postcss": "^8.3.6",
     "postcss-clearfix": "^2.0.1",
     "postcss-custom-properties": "^9.2.0",
